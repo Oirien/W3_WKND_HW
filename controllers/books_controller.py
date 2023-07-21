@@ -1,4 +1,4 @@
-from flask import render_template, Blueprint, request, redirect
+from flask import render_template, Blueprint, request, redirect, jsonify
 from models.book_list import *
 from models.book import *
 
@@ -35,8 +35,18 @@ def book_detail(book_id):
         
 @books_blueprint.route("/catalogue/<int:book_id>/check", methods=['post', 'get'])
 def check_out(book_id):
+    book_checked_out = request.form.get("check_out")
     for book in books:
-        if book.id == int(book_id) and "check_out" in request.form:
-                book.checked_out = True
-                return redirect("/catalogue")
-    return redirect("/catalogue")
+        if book.id == book_id:
+            if book_checked_out == "on":
+                book.check_out()
+                return redirect('/catalogue')
+    return redirect('/catalogue') 
+        
+@books_blueprint.route('/catalogue/delete', methods= ['POST'])
+def remove_book():
+        book_title = request.form['title']
+        for book in books:
+            if book_title == book.title:
+                books.pop(books.index(book))
+        return redirect('/catalogue')

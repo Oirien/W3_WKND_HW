@@ -4,6 +4,8 @@ class Book:
         self.author = author
         self.genre = genre
         self.description = description
-        self.checked_out = False
+        self.checked_out = None
         self.id = id
 
+    def check_out(self):
+        self.checked_out = True

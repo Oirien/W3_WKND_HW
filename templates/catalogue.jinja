@@ -10,10 +10,7 @@
                         <div class="card__container">
                             <h4 class="card__title"><a href="/catalogue/{{book.id}}">{{ book.title }}</a></h4>
                             <p class="card__author">{{ book.author }}</p>
-                            <p class="card__genre">{{ book.genre }}</p>
-                                {% if book.checked_out == True %}
-                                    <p>This book is currently checked out.</p>
-                                {% endif %}   
+                            <p class="card__genre">{{ book.genre }}</p> 
                         </div>
                     </div>
                 </li>
@@ -23,7 +20,7 @@
     <section class="catalogue__right">
         <div class="donation">
            <h2 class="donation__header">Donate your book today!</h2> 
-           <form class="donationform" action="/catalogue", method="post">
+           <form class="donationform" action="/catalogue" method="post">
                 <label for="title_of_book">Title of Book</label>
                 <input type="text" name="title_of_book" id="title_of_book" required>
                 <label for="author_of_book">Author</label>
@@ -35,6 +32,13 @@
                 <label for="submit">Donate!</label>
                 <input type="submit" value="Donate Book">
             </form>
+        </div>
+        <div>
+        <form action="/catalogue/delete", method="post"> 
+            <label for = "name"> Which book are you permanently removing from the collection?</label>
+            <input type="text" name="title" id="title">
+            <input type="submit" value="Remove Book from Catalogue">
+        </form>
         </div>
     </section>
 </main>

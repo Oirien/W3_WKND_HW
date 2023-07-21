@@ -9,8 +9,3 @@ books = [book1, book2, book3, book4]
 
 def add_new_book(book):
     books.append(book)
-
-
-def check_out_book(self, book_id):
-    if self.id == book_id:
-        self.checked_out = True
