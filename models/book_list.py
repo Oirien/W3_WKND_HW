@@ -6,3 +6,6 @@ book3 = Book("The Republic", "Plato", "Philosphy", "The Republic is a Socratic d
 book4 = Book("Oedipus the King", "Sophocles", "Greek Tragedy", "Oedipus the King is an Athenian tragedy by Sophocles that was first performed c. 429 BC. It was the second of Sophocles's three Theban plays to be produced, but it comes first in the internal chronology, followed by Oedipus at Colonus and then Antigone. Over the centuries, it has come to be regarded by many as the Greek tragedy par excellence.", 4)
 
 books = [book1, book2, book3, book4]
+
+def add_new_book(book):
+    books.append(book)
