@@ -1,0 +1,17 @@
+{% extends "base.jinja" %} {% block content %}
+<main>
+    <section class="container home__page">
+        <div class="home">
+            <h1 class="home__header">Welcome to {{ title }}</h1>
+            <p class="home__paragraph"></p>
+            <div class="home__buttons">
+                <button class="home__button"><a href="/catalogue">Catalogue</a></button>
+            </div>
+        </div>
+        <div class="info">
+            <h2 class="info__header"></h2>
+            <p class="info__address"></p>
+        </div>
+    </section>
+</main>
+{% endblock %}

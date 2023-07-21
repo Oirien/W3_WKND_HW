@@ -1,0 +1,21 @@
+{% extends "base.jinja" %} {% block content %}
+<main>
+    <section>
+        <h1>Enjoy perusing our book catalogue</h1>
+        <ul class="card__container">
+            {% for book in books %}
+                <li>
+                    <div class="card">
+                        <img class="card__image" src="" alt="book" style="width:100%">
+                        <div class="card__container">
+                            <h4 class="card__title"><a href="/catalogue/{{book.id}}">book.title</a></h4>
+                            <p class="card__author">{{ book.author }}</p>
+                            <p class="card__genre">{{ book.genre }}</p>
+                        </div>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+</main>
+{% endblock %}

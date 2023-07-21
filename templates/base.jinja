@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__buttons">
+            <button class="header__button"><a href="/home">Home</a></button>
+            <button class="header__button"><a href="/catalogue">Catalogue</a></button>
+        </div>
+    </header>
+    {% block content %}
+        
+    {% endblock content %}
+</body>
+</html>
