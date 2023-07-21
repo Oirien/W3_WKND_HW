@@ -6,3 +6,4 @@ class Book:
         self.description = description
         self.checked_out = False
         self.id = id
+

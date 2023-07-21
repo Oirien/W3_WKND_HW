@@ -1,5 +1,6 @@
 from flask import render_template, Blueprint, request, redirect
 from models.book_list import *
+from models.book import *
 
 books_blueprint = Blueprint("Books", __name__)
 
@@ -21,7 +22,21 @@ def add_book_to_catalogue():
         book_author = request.form["author_of_book"]
         book_genre = request.form["genre_of_book"]
         book_description = request.form["description"]
-        book_id = (len(books) + 1)
+        book_id = len(books) + 1
         new_book = Book(book_title, book_author, book_genre, book_description, book_id)
         add_new_book(new_book)
         return redirect('/catalogue')
+
+@books_blueprint.route("/catalogue/<int:book_id>", methods=['post', 'get'])
+def book_detail(book_id):
+     for book in books:
+        if book.id == book_id:
+            return render_template("book.jinja", title="book.title", books=books, book=book)
+        
+@books_blueprint.route("/catalogue/<int:book_id>/check", methods=['post', 'get'])
+def check_out(book_id):
+    for book in books:
+        if book.id == int(book_id) and "check_out" in request.form:
+                book.checked_out = True
+                return redirect("/catalogue")
+    return redirect("/catalogue")

@@ -1,5 +1,20 @@
 {% extends "base.jinja" %} {% block content %}
 
+<main>
+    <section>
+        <h1>{{book.title}}</h1>
+        <p>Written by: {{book.author}}</p>
+        <p>This book is largely considered to be {{book.genre}}</p>
+        <p>{{book.description}}</p>
+    </section>
+    <div>
+        <form action="/catalogue/{{book.id}}/check" method="['post']">
+            <input type="checkbox" name="check_out" id="check_out">
+            <button type="submit">Check-out Book</button> 
+        </form>  
+    </div>
+</main>
+
 
 
 {% endblock %}

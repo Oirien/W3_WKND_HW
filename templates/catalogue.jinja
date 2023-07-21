@@ -11,6 +11,9 @@
                             <h4 class="card__title"><a href="/catalogue/{{book.id}}">{{ book.title }}</a></h4>
                             <p class="card__author">{{ book.author }}</p>
                             <p class="card__genre">{{ book.genre }}</p>
+                                {% if book.checked_out == True %}
+                                    <p>This book is currently checked out.</p>
+                                {% endif %}   
                         </div>
                     </div>
                 </li>
