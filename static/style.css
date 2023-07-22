@@ -1,9 +1,277 @@
 *{
     padding: 0;
     margin: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+a:visited { 
+    text-decoration: none; 
+    color: #FEFADC; 
+   }
+
+body{
+    background: #000b;
+    background-image: url('/static/images/library4k.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
 }
 
 .container{
-    width: 1100px,
-    
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
+}
+
+.header{
+    background-color: #b1aaa591;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid rgba(216, 216, 216, 0.74);
+}
+
+.header__buttons{
+    display: flex;
+    gap: 3rem;
+}
+
+.header__button{
+    background-color: #80471b9c;
+    color: #FEFADC;
+    border-radius: 10px 2px 10px 2px;
+    padding: 0.5rem 2rem;
+    font-weight: bold;
+    border: 1px solid rgb(254, 250, 220);
+    box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.15);
+    text-shadow: 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.3);
+}
+
+.home__page{
+    display: flex;
+    justify-content: space-between;
+}
+
+.home{
+    background-color: rgba(177, 170, 165, 0.569);
+    margin-top: 6rem;
+    max-width: 550px;
+    width: 100%;
+    height: 500px;
+    padding: 2rem;
+    line-height: 1.5;
+    border-radius: 15px;
+    box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgb(254, 250, 220)
+}
+
+.home__button{
+    background-color: #80471b9c;
+    color: #FEFADC;
+    border-radius: 10px 2px 10px 2px;
+    padding: 0.5rem 2rem;
+    font-weight: bold;
+    border: 1px solid rgb(254, 250, 220);
+    box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.15);
+    text-shadow: 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.3);
+}
+
+.home__header{
+    font-weight: bold;
+    font-size: 3.5rem;
+    color: rgb(29, 16, 7);
+    text-shadow: 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.3);
+}
+
+.home__paragraph{
+    color: rgb(29, 16, 7);
+    text-shadow: 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.info{
+    background-color: rgba(177, 170, 165, 0.569);
+    margin-top: 6rem;
+    max-width: 400px;
+    width: 100%;
+    padding: 2rem;
+    line-height: 1.5;
+    border-radius: 15px;
+    box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgb(254, 250, 220);
+    color: rgb(29, 16, 7);
+    text-align: right;
+}
+
+.info__top{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.info__header{
+    font-weight: bold;
+    font-size: 2rem;
+    text-shadow: 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.3);
+}
+
+.info__social{
+    font-weight: 300;
+    font-size: 1.375rem;
+    text-shadow: 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.3)
+}
+
+.info__address{
+    font-weight: 500;
+    font-size: 1.375rem;
+    text-shadow: 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.3);
+    line-height: 1.5rem;
+}
+
+.catalogue{
+    display: flex;
+    justify-content: space-between;
+}
+
+.catalogue__header{
+    background-color: rgba(177, 170, 165, 0.569);
+    font-weight: bold;
+    font-size: 3.5rem;
+    color: rgb(29, 16, 7);
+    text-shadow: 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    line-height: 1.5;
+    border-radius: 15px;
+    box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.25);
+    margin-top: 2rem;
+    border: 1px solid rgb(254, 250, 220);
+    max-width: 535px;
+
+}
+
+.card__container{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card{
+    display: flex;
+    max-width: 600px;
+    width: 100%;
+    min-width: 600px;
+    border-radius: 25px;background-color: rgba(177, 170, 165, 0.569);
+    margin-top: 2rem;
+    border: 1px solid rgb(254, 250, 220);
+    box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.25);
+}
+
+.card__image{
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.card__wrapper{
+    padding: 1rem;
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-shadow: 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.catalogue__right{
+    background-color: rgba(177, 170, 165, 0.569);
+    margin-top: 2rem;
+    max-width: 550px;
+    width: 100%;
+    height: 500px;
+    padding: 2rem;
+    line-height: 1.5;
+    border-radius: 15px;
+    box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgb(254, 250, 220)
+}
+
+.donation{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.donation__header{
+    font-weight: bold;
+    font-size: 2rem;
+    text-shadow: 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.3);
+}
+
+.donation__form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: 300;
+    font-size: 1.375rem;
+    text-shadow: 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.3)
+}
+
+.donate__button{
+    background-color: #80471b9c;
+    color: #FEFADC;
+    border-radius: 10px 2px 10px 2px;
+    padding: 0.5rem 2rem;
+    font-weight: bold;
+    border: 1px solid rgb(254, 250, 220);
+    box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.15);
+    text-shadow: 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.3);
+}
+
+.delete__book{
+    display: flex;
+    font-weight: 600;
+    font-size: 1.375rem;
+    text-shadow: 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.3)
+}
+
+.delete__button{
+    background-color: #80471b9c;
+    color: #FEFADC;
+    border-radius: 10px 2px 10px 2px;
+    padding: 0.5rem 2rem;
+    font-weight: bold;
+    border: 1px solid rgb(254, 250, 220);
+    box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.15);
+    text-shadow: 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.3);
+}
+
+.book{
+    background-color: rgba(177, 170, 165, 0.569);
+    margin-top: 2rem;
+    max-width: 1300px;
+    width: 100%;
+    height: 400px;
+    padding: 2rem;
+    line-height: 1.5;
+    border-radius: 15px;
+    box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgb(254, 250, 220)
 }

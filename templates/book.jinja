@@ -1,11 +1,11 @@
 {% extends "base.jinja" %} {% block content %}
 
 <main class="book container">
-    <section class="book_container">
-        <h1>{{book.title}}</h1>
-        <p>Written by: {{book.author}}</p>
-        <p>This book is largely considered to be {{book.genre}}</p>
-        <p>{{book.description}}</p>
+    <section class="book__container">
+        <h1 class="book__title">{{book.title}}</h1>
+        <p class="book__author">Written by: {{book.author}}</p>
+        <p class="book__genre">This book is largely considered to be {{book.genre}}</p>
+        <p class="book__description">{{book.description}}</p>
             {% if book.checked_out == True %}
                 <p>This book is currently checked out.</p>   
             {% else %}

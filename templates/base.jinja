@@ -5,16 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
     <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+<body class="bg">
+</body>
 <body>
-    <header class="header container">
-        <div class="header__buttons">
-            <button class="header__button"><a href="/home">Home</a></button>
-            <button class="header__button"><a href="/catalogue">Catalogue</a></button>
-        </div>
-    </header>
+    <div class="header">
+        <header class="container">
+            <div class="header__buttons">
+                <button class="header__button"><a href="/home" style="text-decoration:none">Home</a></button>
+                <button class="header__button"><a href="/catalogue" style="text-decoration:none">Catalogue</a></button>
+            </div>
+        </header>
+    </div>
     {% block content %}
         
     {% endblock content %}
+    
 </body>
+
 </html>

@@ -6,11 +6,13 @@
             {% for book in books %}
                 <li>
                     <div class="card">
-                        <img class="card__image" src="/static/images/book.png">
-                        <div class="card__container">
-                            <h4 class="card__title"><a href="/catalogue/{{book.id}}">{{ book.title }}</a></h4>
-                            <p class="card__author">{{ book.author }}</p>
-                            <p class="card__genre">{{ book.genre }}</p> 
+                        <img class="card__image" src="/static/images/book.png" width="350" height="200">
+                        <div class="card__wrapper">
+                            <h4 class="card__title"><a href="/catalogue/{{book.id}}" style="text-decoration:none">{{ book.title }}</a></h4>
+                            <div class="card__wrapper--bottom">
+                                <p class="card__author">{{ book.author }}</p>
+                                <p class="card__genre">{{ book.genre }}</p>
+                            </div>
                         </div>
                     </div>
                 </li>
@@ -20,7 +22,7 @@
     <section class="catalogue__right">
         <div class="donation">
            <h2 class="donation__header">Donate your book today!</h2> 
-           <form class="donationform" action="/catalogue" method="post">
+           <form class="donation__form" action="/catalogue" method="post">
                 <label for="title_of_book">Title of Book</label>
                 <input type="text" name="title_of_book" id="title_of_book" required>
                 <label for="author_of_book">Author</label>
@@ -30,15 +32,15 @@
                 <label for="description">Description</label>
                 <textarea name="description" id="description" required></textarea>
                 <label for="submit">Donate!</label>
-                <input type="submit" value="Donate Book">
+                <button type="submit" class="donate__button" style="text-decoration:none">Donate Book</button>
             </form>
         </div>
-        <div>
-        <form action="/catalogue/delete", method="post"> 
-            <label for = "name"> Which book are you permanently removing from the collection?</label>
-            <input type="text" name="title" id="title">
-            <input type="submit" value="Remove Book from Catalogue">
-        </form>
+        <div class="delete__book">
+            <form action="/catalogue/delete", method="post"> 
+                <label for = "name"> Which book are you permanently removing from the collection?</label>
+                <input type="text" name="title" id="title">
+                <button type="submit" class="delete__button">Remove Book from Catalogue</button>
+            </form>
         </div>
     </section>
 </main>
