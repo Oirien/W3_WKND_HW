@@ -88,6 +88,7 @@ body{
     font-size: 3.5rem;
     color: rgb(29, 16, 7);
     text-shadow: 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.3);
+    color: #FEFADC;
 }
 
 .home__paragraph{
@@ -150,7 +151,7 @@ body{
     background-color: rgba(177, 170, 165, 0.569);
     font-weight: bold;
     font-size: 3.5rem;
-    color: rgb(29, 16, 7);
+    color: #FEFADC;
     text-shadow: 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.3);
     padding: 2rem;
     line-height: 1.5;
@@ -206,6 +207,7 @@ body{
     border-radius: 15px;
     box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.25);
     display: flex;
+    color: rgb(29, 16, 7);
     flex-direction: column;
     justify-content: space-between;
     border: 1px solid rgb(254, 250, 220)
@@ -215,6 +217,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    color: rgb(29, 16, 7);
 }
 .donation__header{
     font-weight: bold;
@@ -283,6 +286,7 @@ body{
     font-size: 3.5rem;
     color: rgb(29, 16, 7);
     text-shadow: 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.3);
+    color: #FEFADC
 }
 
 .book__author{
