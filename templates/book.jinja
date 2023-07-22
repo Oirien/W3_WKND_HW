@@ -1,22 +1,22 @@
 {% extends "base.jinja" %} {% block content %}
 
 <main class="book container">
-    <section class="book__container">
-        <h1 class="book__title">{{book.title}}</h1>
-        <p class="book__author">Written by: {{book.author}}</p>
-        <p class="book__genre">This book is largely considered to be {{book.genre}}</p>
-        <p class="book__description">{{book.description}}</p>
-            {% if book.checked_out == True %}
-                <p>This book is currently checked out.</p>   
-            {% else %}
-                <p>This book is availble for loan.</p>
-            {% endif %}  
+    <section class="book__container"></section>
+            <h1 class="book__title">{{book.title}}</h1>
+            <p class="book__author">Written by: {{book.author}}</p>
+            <p class="book__genre">This book is largely considered to be {{book.genre}}</p>
+            <p class="book__description">{{book.description}}</p>
+                {% if book.checked_out == True %}
+                    <p>This book is currently checked out.</p>   
+                {% else %}
+                    <p>This book is availble for loan.</p>
+                {% endif %}  
     </section>
-    <div class="container">
+    <div class="check_out">
         <form action="/catalogue/{{ book.id }}/check" method="post">
             <input type="checkbox" name="check_out" id="check_out_{{ book.id }}">
             <label for="check_out_{{ book.id }}">Check-out Book</label>
-            <button type="submit">Submit</button>
+            <button type="submit" class="check_out__button">Submit</button>
         </form>  
     </div>
 </main>
